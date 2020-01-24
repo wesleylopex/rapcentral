@@ -196,7 +196,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
+        <!-- <div class="col-md-12 col-sm-12 col-xs-12"> -->
           <!-- start interactive banners item -->
           <div class="col-md-4 col-sm-4 col-xs-12 padding-5px-all grid-item feature-box-4 wow slideInDown" style="visibility: visible; animation-name: slideInDown;">
             <div class="position-relative overflow-hidden">
@@ -243,12 +243,12 @@
             </div>
           </div>
           <!-- end interactive banners item -->
-        </div>
+        <!-- </div> -->
       </div>
     </div>
   </section>
 
-  <!-- start footer -->
+  <!-- call to action -->
   <section class="wow fadeIn padding-60px-tb border-top border-width-1 border-color-extra-light-gray">
     <div class="container">
       <div class="row text-center padding-one-half-bottom">

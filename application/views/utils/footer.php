@@ -13,7 +13,7 @@
       <div class="col-md-6 col-sm-6 col-xs-12 text-center text-small alt-font display-table xs-margin-10px-bottom sm-text-center text-light-gray text-small" style="margin-top: 2px">
         <div class="display-table-cell vertical-align-middle"> &copy; 2018 Cecomatec - Todos os direitos reservados. Desenvolvido por
           <a href="http://jocc.com.br/">
-            <img class="" src="images/logojocc.png" alt="Jocc" style="width:30px; margin-left:3px" />
+            <img class="" src="<?= base_url() ?>assets/img/logojocc.png" alt="Jocc" style="width:30px; margin-left:3px" />
           </a>
         </div>
       </div>

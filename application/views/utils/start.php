@@ -1,12 +1,8 @@
-<title> Cecomatec </title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 <!-- favicon -->
 <link rel="shortcut icon" href="<?= base_url() ?>assets/img/favicon.png">
-<link rel="apple-touch-icon" href="<?= base_url() ?>assets/img/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>assets/img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>assets/img/apple-touch-icon-114x114.png">
 <!-- animation -->
 <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.css" />
 <!-- bootstrap -->

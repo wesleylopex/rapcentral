@@ -55,9 +55,10 @@
               <li class="dropdown simple-dropdown">
                 <a class="hover-orange" href="produtos.php">Produtos</a>
                 <ul class="dropdown-menu animated fadeOut" role="menu" style="top: 72px; display: none; opacity: 1;background-color:white;border:1px solid #f9f9f9; width: 250px;">
-                  <li class='dropdown'><a href='produtos.php?categoria=".$arrayCats[$c]->getId()."' class='dropdown-toggle hover-orange' data-toggle='dropdown' style='color:black;'>".utf8_encode($arrayCats[$c]->getNome())."<i class='fa fa-angle-right'></i></a>
+                  <li class='dropdown'>
+                    <a href="" class='dropdown-toggle hover-orange' data-toggle='dropdown' style='color:black;'>Lorem<i class='fa fa-angle-right'></i></a>
                     <ul class='dropdown-menu animated fadeOut' style='top:0px;display: none; opacity: 1;background-color:white;border:1px solid #f9f9f9;'>
-                      <li><a href='produtos.php?categoria=".$arrayCats[$c]->getId()."&subcategoria=".$arraySubs[$j]->getId()."' class='hover-orange' style='color:black;'>".utf8_encode($arraySubs[$j]->getNome())."</a></li>
+                      <li><a href="" class='hover-orange' style='color:black;'>Lorem</a></li>
                     </ul>
                   </li>
                 </ul>
