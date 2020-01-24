@@ -2,24 +2,24 @@
   var base_url = "<?= base_url(); ?>"
 </script>
 
-<script src="<?= base_url() ?>assets/js/core/jquery.3.2.1.min.js"></script>
-<script src="<?= base_url() ?>assets/js/core/popper.min.js"></script>
-<script src="<?= base_url() ?>assets/js/core/bootstrap.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/moment/moment.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/select2/select2.full.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
-<script src="<?= base_url() ?>assets/js/ready.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/datatables/datatables.min.js"></script>
-<script src="<?= base_url() ?>assets/js/setting-demo2.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/mask/jquery.mask.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/dropzone/dropzone.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/core/jquery.3.2.1.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/core/popper.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/core/bootstrap.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/moment/moment.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/select2/select2.full.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/ready.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/datatables/datatables.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/setting-demo2.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/mask/jquery.mask.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/dropzone/dropzone.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/js/plugin/jquery.validate/jquery.validate.min.js"></script>
 
 <script>
   // plugin jquery validation

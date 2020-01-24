@@ -5,10 +5,10 @@
 					Tip 1: You can change the background color of the logo header using: data-background-color="black | dark | blue | purple | light-blue | green | orange | red"
 				-->
     <!-- <a href="<?= site_url("painel/home") ?>" class="big-logo">
-      <img src="<?= base_url() ?>assets/img/logoresponsive.png" alt="logo img" class="logo-img">
+      <img src="<?= base_url() ?>assets/painel/img/logoresponsive.png" alt="logo img" class="logo-img">
     </a> -->
     <a href="<?= site_url("painel/home") ?>" class="logo">
-      <img src="<?= base_url() ?>assets/img/logo_jocc_branco.png" alt="navbar brand" class="navbar-brand">
+      <img src="<?= base_url() ?>assets/painel/img/logo_jocc_branco.png" alt="navbar brand" class="navbar-brand">
     </a>
     <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon">
@@ -42,13 +42,13 @@
         </li>
         <li class="nav-item dropdown hidden-caret">
           <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-            <img src="<?= base_url("assets/uploads/images/".$this->session->userdata("imagem")) ?>" alt="image profile" width="36" height="36" class="img-circle">
+            <img src="<?= base_url("assets/painel/uploads/images/".$this->session->userdata("imagem")) ?>" alt="image profile" width="36" height="36" class="img-circle">
           </a>
           <ul class="dropdown-menu dropdown-user animated fadeIn">
             <li>
               <div class="user-box">
                 <div class="profile-pic">
-                  <img src="<?= base_url("assets/uploads/images/".$this->session->userdata("imagem")) ?>" alt="image profile" width="60" height="60" class="img-circle">
+                  <img src="<?= base_url("assets/painel/uploads/images/".$this->session->userdata("imagem")) ?>" alt="image profile" width="60" height="60" class="img-circle">
                 </div>
                 <div class="u-text">
                   <h4><?= $this->session->userdata("nome") ?></h4>

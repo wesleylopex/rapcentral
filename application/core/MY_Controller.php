@@ -133,7 +133,7 @@ class GodController extends MY_Controller
       session_start();
       $dropzoneImages = $_SESSION["dropzoneImages"];
 
-      if ($dropzoneImages) {
+      if (sizeof($dropzoneImages) > 0) {
         $this->load->model($dropzoneModel);
         foreach ($dropzoneImages as $key => $imageName) {
           $this->{$dropzoneModel}->create([

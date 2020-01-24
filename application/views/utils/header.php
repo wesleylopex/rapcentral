@@ -18,8 +18,8 @@
               Português (Brasil)<span class="caret"></span>
             </button>
             <ul class="dropdown-menu xs-width-100" name="idioma">
-              <li><a href="../en/"><span class="icon-country usa"></span>Inglês</a></li>
-              <li><a href="../es/"><span class="icon-country esp"></span>Espanhol</a></li>
+              <li><a href="../en/"><span class="icon-country usa" style="background: url(<?= base_url("assets/site/img/country-flag-16x16/usa.png") ?>)"></span>Inglês</a></li>
+              <li><a href="../es/"><span class="icon-country esp" style="background: url(<?= base_url("assets/site/img/country-flag-16x16/Spain.png") ?>)"></span>Espanhol</a></li>
             </ul>
           </div>
         </div>
@@ -34,7 +34,7 @@
         <!-- start logo -->
         <div class="col-md-4 col-xs-5">
           <a href="index.php" class="logo">
-            <img src="<?= base_url() ?>assets/img/logo.png" data-no-retina class="logo-dark default" style="max-height:40px;">
+            <img src="<?= base_url() ?>assets/site/img/logo.png" data-no-retina class="logo-dark default" style="max-height:40px;">
           </a>
         </div>
         <!-- end logo -->
@@ -48,12 +48,12 @@
           <div class="navbar-collapse collapse pull-right" id="navbar-collapse-toggle-1">
             <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
               <!-- start menu item -->
-              <li>
-                <a class="hover-orange" href="index.php">Início</a>
+              <li class="<?= $page == "home" ? "active" : "" ?>">
+                <a class="hover-orange" href="<?= base_url() ?>">Início</a>
               </li>
 
-              <li class="dropdown simple-dropdown">
-                <a class="hover-orange" href="produtos.php">Produtos</a>
+              <li class="dropdown simple-dropdown <?= $page == "produtos" ? "active" : "" ?>">
+                <a class="hover-orange" href="<?= site_url("produtos") ?>">Produtos</a>
                 <ul class="dropdown-menu animated fadeOut" role="menu" style="top: 72px; display: none; opacity: 1;background-color:white;border:1px solid #f9f9f9; width: 250px;">
                   <li class='dropdown'>
                     <a href="" class='dropdown-toggle hover-orange' data-toggle='dropdown' style='color:black;'>Lorem<i class='fa fa-angle-right'></i></a>
@@ -64,8 +64,8 @@
                 </ul>
               </li>
 
-              <li class="dropdown simple-dropdown">
-                <a class="hover-orange" href="servicos.php">Serviços</a>
+              <li class="dropdown simple-dropdown <?= $page == "servicos" ? "active" : "" ?>">
+                <a class="hover-orange" href="<?= site_url("servicos") ?>">Serviços</a>
                 <ul class="dropdown-menu animated fadeOut" role="menu" style="top: 72px; display: none; opacity: 1;background-color:white;border:1px solid #f9f9f9;">
                   <li><a href="servicos.php#Microfusao" class="hover-orange" style="color:black;">Assessoria Microfusão</a></li>
                   <li><a href="servicos.php#Usinagem" class="hover-orange" style="color:black;">Usinagem</a></li>
@@ -73,12 +73,12 @@
                 </ul>
               </li>
 
-              <li>
-                <a class="hover-orange" href="empresa.php">Empresa</a>
+              <li class="<?= $page == "empresa" ? "active" : "" ?>">
+                <a class="hover-orange" href="<?= site_url("empresa") ?>">Empresa</a>
               </li>
 
-              <li>
-                <a class="hover-orange" href="contato.php">Contato</a>
+              <li class="<?= $page == "contato" ? "active" : "" ?>">
+                <a class="hover-orange" href="<?= site_url("contato") ?>">Contato</a>
               </li>
             </ul>
           </div>

@@ -209,7 +209,7 @@
               location.href = `${base_url}painel/${nomes.link}`
             }, 1500)
           } else
-            $("form").validate()
+            showAlert("primary", response.message, response.icon)
         }
       });
     }

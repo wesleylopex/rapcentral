@@ -20,7 +20,7 @@ class Noticias extends GodController
 			"nome" => "Id",
 			"type" => "hidden",
 			"visivelTabela" => false,
-			"rules" => "trim|required",
+			"rules" => "trim",
 		],
 
 		"titulo" => [

@@ -179,7 +179,7 @@
             </a>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding cover-background sm-height-500px xs-height-350px wow fadeInLeft" id="img_2" style="background-image: url('<?= base_url() ?>assets/img/bndes.png'); height: 699px;">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 no-padding cover-background sm-height-500px xs-height-350px wow fadeInLeft" id="img_2" style="background-image: url('<?= base_url() ?>assets/site/img/bndes.png'); height: 699px;">
         </div>
       </div>
     </div>
@@ -196,54 +196,52 @@
         </div>
       </div>
       <div class="row">
-        <!-- <div class="col-md-12 col-sm-12 col-xs-12"> -->
-          <!-- start interactive banners item -->
-          <div class="col-md-4 col-sm-4 col-xs-12 padding-5px-all grid-item feature-box-4 wow slideInDown" style="visibility: visible; animation-name: slideInDown;">
-            <div class="position-relative overflow-hidden">
-              <figure>
-                <img src="<?= base_url() ?>assets/img/001_index.jpg" alt="Assessoria Microfusão" style="height:338px;">
-                <div class="opacity-medium bg-extra-dark-gray"></div>
-                <figcaption>
-                  <span class="text-medium-gray margin-10px-bottom display-inline-block ">Conte com uma assessoria completa em <br>função de precisão</span>
-                  <div class="separator-line-horrizontal-full display-inline-block margin-10px-bottom" style="background-color: orange;"></div>
-                  <span class="text-extra-large display-block text-white alt-font margin-25px-bottom width-90 md-width-100 sm-width-100 sm-margin-seven-bottom xs-width-100">Assessoria Microfusão</span>
-                  <a href="servicos.php?#Microfusao" class="btn btn-small btn-orange font-weight-300">Saiba mais</a>
-                </figcaption>
-              </figure>
-            </div>
+        <!-- start interactive banners item -->
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-5px-all grid-item feature-box-4 wow slideInDown" style="visibility: visible; animation-name: slideInDown;">
+          <div class="position-relative overflow-hidden">
+            <figure style="margin: 0">
+              <img src="<?= base_url() ?>assets/site/img/001_index.jpg" alt="Assessoria Microfusão" style="height:338px;">
+              <div class="opacity-medium bg-extra-dark-gray"></div>
+              <figcaption>
+                <span class="text-medium-gray margin-10px-bottom display-inline-block ">Conte com uma assessoria completa em <br>função de precisão</span>
+                <div class="separator-line-horrizontal-full display-inline-block margin-10px-bottom" style="background-color: orange;"></div>
+                <span class="text-extra-large display-block text-white alt-font margin-25px-bottom width-90 md-width-100 sm-width-100 sm-margin-seven-bottom xs-width-100">Assessoria Microfusão</span>
+                <a href="servicos.php?#Microfusao" class="btn btn-small btn-orange font-weight-300">Saiba mais</a>
+              </figcaption>
+            </figure>
           </div>
-          <!-- end interactive banners item -->
-          <div class="col-md-4 col-sm-4 col-xs-12 padding-5px-all grid-item feature-box-4 wow slideInDown" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: slideInDown;">
-            <div class="position-relative overflow-hidden">
-              <figure>
-                <img src="<?= base_url() ?>assets/img/norma.png" alt="Reformas e adequações NR12" style="height:338px;">
-                <div class="opacity-medium bg-extra-dark-gray"></div>
-                <figcaption>
-                  <span class="text-medium-gray margin-10px-bottom display-inline-block ">Em conformidade com a NR-12</span>
-                  <div class="separator-line-horrizontal-full display-inline-block margin-10px-bottom" style="background-color: orange;"></div>
-                  <span class="text-extra-large display-block text-white alt-font margin-25px-bottom width-90 md-width-100 sm-width-100 sm-margin-seven-bottom xs-width-100">Reformas e adequações NR12</span>
-                  <a href="servicos.php?#Norma" class="btn btn-small btn-orange font-weight-300">Saiba mais</a>
-                </figcaption>
-              </figure>
-            </div>
+        </div>
+        <!-- end interactive banners item -->
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-5px-all grid-item feature-box-4 wow slideInDown" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: slideInDown;">
+          <div class="position-relative overflow-hidden">
+            <figure style="margin: 0">
+              <img src="<?= base_url() ?>assets/site/img/norma.png" alt="Reformas e adequações NR12" style="height:338px;">
+              <div class="opacity-medium bg-extra-dark-gray"></div>
+              <figcaption>
+                <span class="text-medium-gray margin-10px-bottom display-inline-block ">Em conformidade com a NR-12</span>
+                <div class="separator-line-horrizontal-full display-inline-block margin-10px-bottom" style="background-color: orange;"></div>
+                <span class="text-extra-large display-block text-white alt-font margin-25px-bottom width-90 md-width-100 sm-width-100 sm-margin-seven-bottom xs-width-100">Reformas e adequações NR12</span>
+                <a href="servicos.php?#Norma" class="btn btn-small btn-orange font-weight-300">Saiba mais</a>
+              </figcaption>
+            </figure>
           </div>
-          <!-- start interactive banners item -->
-          <div class="col-md-4 col-sm-4 col-xs-12 padding-5px-all grid-item feature-box-4 wow slideInDown" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: slideInDown;">
-            <div class="position-relative overflow-hidden">
-              <figure>
-                <img src="<?= base_url() ?>assets/img/usinagem.png" alt="Usinagem" style="height:338px;">
-                <div class="opacity-medium bg-extra-dark-gray"></div>
-                <figcaption>
-                  <span class="text-medium-gray margin-10px-bottom display-inline-block ">Alta tecnologia com a qualidade Cecomatec</span>
-                  <div class="separator-line-horrizontal-full display-inline-block margin-10px-bottom" style="background-color: orange;"></div>
-                  <span class="text-extra-large display-block text-white alt-font margin-25px-bottom width-90 md-width-100 sm-width-100 sm-margin-seven-bottom xs-width-100">Usinagem</span>
-                  <a href="servicos.php?#Usinagem" class="btn btn-small btn-orange font-weight-300">Saiba mais</a>
-                </figcaption>
-              </figure>
-            </div>
+        </div>
+        <!-- start interactive banners item -->
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-5px-all grid-item feature-box-4 wow slideInDown" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: slideInDown;">
+          <div class="position-relative overflow-hidden">
+            <figure style="margin: 0">
+              <img src="<?= base_url() ?>assets/site/img/usinagem.png" alt="Usinagem" style="height:338px;">
+              <div class="opacity-medium bg-extra-dark-gray"></div>
+              <figcaption>
+                <span class="text-medium-gray margin-10px-bottom display-inline-block ">Alta tecnologia com a qualidade Cecomatec</span>
+                <div class="separator-line-horrizontal-full display-inline-block margin-10px-bottom" style="background-color: orange;"></div>
+                <span class="text-extra-large display-block text-white alt-font margin-25px-bottom width-90 md-width-100 sm-width-100 sm-margin-seven-bottom xs-width-100">Usinagem</span>
+                <a href="servicos.php?#Usinagem" class="btn btn-small btn-orange font-weight-300">Saiba mais</a>
+              </figcaption>
+            </figure>
           </div>
-          <!-- end interactive banners item -->
-        <!-- </div> -->
+        </div>
+        <!-- end interactive banners item -->
       </div>
     </div>
   </section>
