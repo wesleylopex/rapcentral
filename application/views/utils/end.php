@@ -1,49 +1,50 @@
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/jquery.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/modernizr.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/skrollr.min.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/smooth-scroll.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/jquery.appear.js"></script>
-<!-- menu navigation -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/bootsnav.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/jquery.nav.js"></script>
-<!-- animation -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/wow.min.js"></script>
-<!-- page scroll -->
+<!-- Main jQuery -->
+<script src="<?php base_url() ?>assets/site/plugins/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.1 -->
+  <script src="<?php base_url() ?>assets/site/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Bootstrap Touchpin -->
+  <script src="<?php base_url() ?>assets/site/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+  <!-- Instagram Feed Js -->
+  <script src="<?php base_url() ?>assets/site/plugins/instafeed-js/instafeed.min.js"></script>
+  <!-- Video Lightbox Plugin -->
+  <script src="<?php base_url() ?>assets/site/plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+  <!-- Count Down Js -->
+  <script src="<?php base_url() ?>assets/site/plugins/SyoTimer/build/jquery.syotimer.min.js"></script>
+  <!-- Revolution Slider -->
 
-<!-- swiper carousel -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/swiper.min.js"></script>
-<!-- counter -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/jquery.count-to.js"></script>
-<!-- parallax -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/jquery.stellar.js"></script>
-<!-- magnific popup -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/jquery.magnific-popup.min.js"></script>
-<!-- portfolio with shorting tab -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/isotope.pkgd.min.js"></script>
-<!-- images loaded -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/imagesloaded.pkgd.min.js"></script>
-<!-- pull menu -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/classie.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/hamburger-menu.js"></script>
-<!-- counter  -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/counter.js"></script>
-<!-- fit video  -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/jquery.fitvids.js"></script>
-<!-- equalize -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/equalize.min.js"></script>
-<!-- skill bars  -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/skill.bars.jquery.js"></script>
-<!-- justified gallery  -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/justified-gallery.min.js"></script>
-<!--pie chart-->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/jquery.easypiechart.min.js"></script>
-<!-- instagram -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/instafeed.min.js"></script>
-<!-- retina -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/retina.min.js"></script>
-<!-- revolution -->
-<script type="text/javascript" src="<?= base_url() ?>assets/site/revolution/js/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script type="text/javascript" src="<?= base_url() ?>assets/site/js/main.js"></script>
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <script src="<?php base_url() ?>assets/site/plugins/owl-carousel/dist/owl.carousel.min.js"></script>
+  <!-- Revolution Slider -->
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/revolution-slider/assets/warning.js"></script>
+
+  <!-- Google Mapl -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+
+  <script type="text/javascript" src="<?php base_url() ?>assets/site/plugins/google-map/gmap.js"></script>
+
+  <!-- Main Js File -->
+  <script src="<?php base_url() ?>assets/site/js/script.js"></script>

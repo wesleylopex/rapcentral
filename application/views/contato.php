@@ -1,139 +1,129 @@
-<html class="no-js" lang="pt-br">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 
 <head>
-  <title> Cecomatec | Contato </title>
-  <?php include("utils/start.php"); ?>
+    <?php include_once("utils/start.php") ?>
+
 </head>
 
-<body>
-  <?php include_once("utils/header.php"); ?>
+<body id="body">
 
+    <!-- Start Top Header Bar -->
+    <?php include_once("utils/header.php") ?>    
 
-  <section class="wow fadeIn bg-light-gray padding-35px-top padding-35px-bottom page-title-small">
-    <div class="container">
-      <div class="row equalize xs-equalize-auto">
-        <div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 display-table">
-          <div class="display-table-cell vertical-align-middle text-left xs-text-center">
-            <h1 class="alt-font text-extra-dark-gray font-weight-600 no-margin-bottom text-uppercase">Fale com a Cecomatec</h1>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 display-table text-right xs-text-left xs-margin-10px-top">
-          <div class="display-table-cell vertical-align-middle breadcrumb text-small alt-font">
-            <ul class="xs-text-center">
-              <li><span class="text-dark-gray">Estamos sempre prontos para lhe atender</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- start contact form -->
-  <section id="contact" class="no-padding">
-    <div class="container-fluid">
-      <div class="row">
-
-        <div class="col-md-6 padding-fifteen-tb padding-two-lr">
-          <div class="row">
-            <div class="col-md-12">
-              <!-- start contact info item -->
-              <div class="col-md-4 col-xs-12 text-center xs-margin-30px-bottom wow fadeInUp last-paragraph-no-margin">
-                <div class="display-inline-block margin-20px-bottom">
-                  <div class="bg-extra-medium-gray icon-round-very-small" style="background-color:orange"><i class="icon-map-pin icon-small text-white"></i></div>
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content">
+                        <h1 class="page-name">contato</h1>
+                        <ol class="breadcrumb">
+                            <li><a href="#">home</a></li>
+                            <li class="active">contato</li>
+                        </ol>
+                    </div>
                 </div>
-                <div class="text-extra-dark-gray text-uppercase text-small font-weight-600 alt-font margin-5px-bottom">Faça uma visita</div>
-                <p class="center-col">Rua Francisco Balbinot, 163 <br> Santa Catarina, Farroupilha</p>
-                <a href="#map" class="scroll text-uppercase text-green-jocc text-small margin-15px-top xs-margin-10px-top display-inline-block" style="color:#FF8C00">VEJA NO MAPA</a>
-              </div>
-              <!-- end contact info item -->
-              <!-- start contact info item -->
-              <div class="col-md-4 col-xs-12 text-center sm-margin-eight-bottom xs-margin-30px-bottom wow fadeInUp last-paragraph-no-margin" data-wow-delay="0.2s">
-                <div class="display-inline-block margin-20px-bottom">
-                  <div class="bg-extra-dark-gray icon-round-very-small" style="background-color:orange"><i class="icon-chat icon-small text-white"></i></div>
-                </div>
-                <div class="text-extra-dark-gray text-uppercase text-small font-weight-600 alt-font margin-5px-bottom">Vamos conversar</div>
-                <p class="center-col"> <a href="tel:+55(54)32615048" class="emails hover-orange"> Fone: (54) 3261-5048 </a> <br> <a href="tel:+55(54)32683891" class="emails hover-orange"> Fax: (54) 3268-3891 </a> </p>
-                <a href="tel:+55(54)32615048" class="text-uppercase text-green-jocc text-small margin-15px-top xs-margin-10px-top display-inline-block" style="color:#FF8C00">nos ligue</a>
-              </div>
-              <!-- end contact info item -->
-              <!-- start contact info item -->
-              <div class="col-md-4 col-xs-12 text-center wow fadeInUp last-paragraph-no-margin" data-wow-delay="0.4s">
-                <div class="display-inline-block margin-20px-bottom">
-                  <div class="bg-extra-dark-gray icon-round-very-small" style="background-color:orange"><i class="icon-envelope icon-small text-white"></i></div>
-                </div>
-                <div class="text-extra-dark-gray text-uppercase text-small font-weight-600 alt-font margin-5px-bottom">deixe um recado</div>
-                <p class="center-col"><a href="mailto:cecomatec@cecomatec.com.br" class="emails hover-orange">cecomatec@cecomatec.com.br</a></p><br>
-                <a href="mailto:cecomatec@cecomatec.com.br" class="text-uppercase  text-small margin-15px-top xs-margin-10px-top display-inline-block" style="color:#FF8C00">envie um e-mail</a>
-              </div>
-              <!-- end contact info item -->
             </div>
-          </div>
         </div>
+    </section>
 
-        <div class="col-md-6" style="background-color: #f9f9f9;">
-          <div class="padding-eleven-all text-center xs-no-padding-lr">
-            <div class="text-medium-gray alt-font text-small text-uppercase margin-5px-bottom xs-margin-three-bottom">preecnha o formulário e retornaremos em breve</div>
 
-            <h5 class="margin-55px-bottom text-dark-gray alt-font font-weight-700 text-uppercase xs-margin-ten-bottom">Contato Via e-mail</h5>
 
-            <form id="project-contact-form" action="javascript:void(0)" method="post">
-              <div class="row">
-                <div class="col-md-12">
-                  <div id="success-project-contact-form" class="no-margin-lr"></div>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" name="name" id="name" placeholder="Nome *" class="bg-transparent border-color-medium-gray medium-input border-radius-5 border-color-dark-gray-hover transition-zero4">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" name="phone" id="phone" placeholder="Telefone" class="bg-transparent border-color-medium-gray medium-input border-radius-5 border-color-dark-gray-hover transition-zero4">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" name="empresa" id="empresa" placeholder="Empresa" class="bg-transparent border-color-medium-gray medium-input border-radius-5 border-color-dark-gray-hover transition-zero4">
-                </div>
-                <div class="col-md-6">
-                  <input type="text" name="cidade_estado" id="cidade_estado" placeholder="Cidade / Estado" class="bg-transparent border-color-medium-gray medium-input border-radius-5 border-color-dark-gray-hover transition-zero4">
-                </div>
-                <div class="col-md-12">
-                  <input type="text" name="email" id="email" placeholder="E-mail *" class="bg-transparent border-color-medium-gray medium-input border-radius-5 border-color-dark-gray-hover transition-zero4">
-                </div>
-                <div class="col-md-12">
-                  <textarea name="comment" id="comment" placeholder="Mensagem" rows="6" class="bg-transparent border-color-medium-gray medium-textarea border-radius-5 border-color-dark-gray-hover transition-zero4"></textarea>
-                </div>
-                <div class="col-md-12 text-center">
-                  <button id="project-contact-us-button " type="submit" class="text-white btn btn-orange-style-2 btn-large margin-20px-top" style="border-radius: 5px; border: 1px solid">Enviar</button>
 
-                </div>
-              </div>
-            </form>
+    <section class="page-wrapper">
+        <div class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Contact Form -->
+                    <div class="contact-form col-md-6">
+                        <form id="contact-form" method="post" action="" role="form">
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Nome" class="form-control" name="name" id="name">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" placeholder="E-mail" class="form-control" name="email" id="email">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" placeholder="Assunto" class="form-control" name="subject" id="subject">
+                            </div>
+
+                            <div class="form-group">
+                                <textarea rows="6" placeholder="Mensagem" class="form-control" name="message" id="message"></textarea>
+                            </div>
+
+                            <div id="mail-success" class="success">
+                                Thank you. The Mailman is on His Way :)
+                            </div>
+
+                            <div id="mail-fail" class="error">
+                                Sorry, don't know what happened. Try later :(
+                            </div>
+
+                            <div id="cf-submit">
+                                <input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar!">
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- ./End Contact Form -->
+
+                    <!-- Contact Details -->
+                    <div class="contact-details col-md-6">
+                        
+                        <div class="row">
+                            <div class="col">
+                            <div class="title text-center">
+            <h2>Entre em contato</h2>
           </div>
+                            </div>
+                            <div class="col">
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, facere labore. Consectetur optio reiciendis, consequatur alias ullam in perspiciatis reprehenderit tempore soluta, neque mollitia minima molestiae libero deserunt quia beatae!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                        <!-- Footer Social Links -->
+                        <div class="social-icon">
+                            <ul class="text-center">
+                                <li><a class="fb-icon" href="#"><i class="tf-ion-social-instagram"></i></a></li>
+                                <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+                                <li><a href="#"><i class="tf-ion-social-googleplus-outline"></i></a></li>
+                            </ul>
+                        </div>
+                        <!--/. End Footer Social Links -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / End Contact Details -->
+
+
+
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- end contact form -->
+    </section>
 
-  <!-- start map section -->
-  <section class="no-padding">
-    <div class="row">
-      <div class="col-md-12">
-        <div id="map" style="height: 330px; opacity: 0.87;"></div>
-      </div>
-    </div>
-  </section>
-  <!-- end map section -->
+    <?php include_once("utils/footer.php") ?>
 
-  <!-- start footer -->
-  <?php include_once("utils/footer.php"); ?>
-  <!-- end footer -->
+<!-- 
+Essential Scripts
+=====================================-->
+<?php include_once("utils/end.php") ?>
 
-  <!-- start scroll to top -->
-  <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
-  <!-- end scroll to top  -->
 
-  <script src="<?= base_url() ?>assets/js/map.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlYRX4JcJLzJQ4S8lnVZy6FdvipuszGKY&callback=initMap" defer></script>
 
-  <?php include_once("utils/end.php") ?>
 </body>
 
 </html>
