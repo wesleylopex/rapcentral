@@ -42,13 +42,13 @@
         </li>
         <li class="nav-item dropdown hidden-caret">
           <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-            <img src="<?= base_url("assets/painel/uploads/images/".$this->session->userdata("imagem")) ?>" alt="image profile" width="36" height="36" class="img-circle">
+            <img src="<?= base_url("assets/uploads/images/".$this->session->userdata("imagem")) ?>" alt="image profile" width="36" height="36" class="img-circle">
           </a>
           <ul class="dropdown-menu dropdown-user animated fadeIn">
             <li>
               <div class="user-box">
                 <div class="profile-pic">
-                  <img src="<?= base_url("assets/painel/uploads/images/".$this->session->userdata("imagem")) ?>" alt="image profile" width="60" height="60" class="img-circle">
+                  <img src="<?= base_url("assets/uploads/images/".$this->session->userdata("imagem")) ?>" alt="image profile" width="60" height="60" class="img-circle">
                 </div>
                 <div class="u-text">
                   <h4><?= $this->session->userdata("nome") ?></h4>
@@ -114,26 +114,6 @@
         </li>
         <li class="nav-item <?= isset($nomes) && $nomes["link"] == "categoriasNoticias" ? "active" : "" ?>">
           <a href="<?= site_url("painel/categoriasNoticias") ?>">
-            <i class="la la-align-justify"></i>
-            <p>Categorias</p>
-          </a>
-        </li>
-        
-        <!-- PRODUTOS -->
-        <li class="nav-section">
-          <span class="sidebar-mini-icon">
-            <i class="la la-ellipsis-h"></i>
-          </span>
-          <h4 class="text-section">Produtos</h4>
-        </li>
-        <li class="nav-item <?= isset($nomes) && $nomes["link"] == "produtos" ? "active" : "" ?>">
-          <a href="<?= site_url("painel/produtos") ?>">
-            <i class="la la-mobile"></i>
-            <p>Produtos</p>
-          </a>
-        </li>
-        <li class="nav-item <?= isset($nomes) && $nomes["link"] == "categoriasProdutos" ? "active" : "" ?>">
-          <a href="<?= site_url("painel/categoriasProdutos") ?>">
             <i class="la la-align-justify"></i>
             <p>Categorias</p>
           </a>

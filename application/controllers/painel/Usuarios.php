@@ -20,7 +20,7 @@ class Usuarios extends GodController
 			"nome" => "Id",
 			"type" => "hidden",
 			"visivelTabela" => false,
-			"rules" => "trim|required",
+			"rules" => "trim",
 		],
 
 		"nome" => [
@@ -46,7 +46,7 @@ class Usuarios extends GodController
 			"nome" => "Usuário",
 			"type" => "text",
 			"visivelTabela" => true,
-			"rules" => "trim|required|unique",
+			"rules" => "trim|required",
 			"col" => "col-md-6"
 		],
 
@@ -54,14 +54,14 @@ class Usuarios extends GodController
 			"nome" => "Senha",
 			"type" => "password",
 			"visivelTabela" => false,
-			"rules" => "trim|required",
+			"rules" => "trim",
 			"col" => "col-md-6"
 		],
 
 		"imagem" => [
 			"nome" => "Imagem",
 			"type" => "image",
-			"rules" => "trim|required",
+			"rules" => "trim",
 			"col" => "col-md-12",
 			"label" => "(1920 x 1080)"
 		],

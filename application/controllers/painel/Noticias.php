@@ -29,6 +29,7 @@ class Noticias extends GodController
 			"visivelTabela" => true,
 			"rules" => "trim|required",
 			"col" => "col-md-12",
+			"slug" => true,
 			"required" => "required",
 		],
 
@@ -43,11 +44,41 @@ class Noticias extends GodController
 				"model" => "categoriasNoticiasModel",
 			],
 			"visivelTabela" => true,
-			"col" => "col-md-12"
+			"col" => "col-md-4"
 		],
 
-		"descricao" => [
-			"nome" => "Descrição",
+		"id_usuario" => [
+			"nome" => "Autor",
+			"type" => "select",
+			"rules" => "trim|required",
+			"fromDataBase" => true,
+			"options" => [
+				"value" => "id",
+				"texto" => "nome",
+				"model" => "usuariosModel",
+			],
+			"visivelTabela" => true,
+			"col" => "col-md-4"
+		],
+
+		"data" => [
+			"nome" => "Data",
+			"type" => "date",
+			// "rules" => "",
+			"visivelTabela" => true,
+			"col" => "col-md-4",
+		],
+
+		"imagem" => [
+			"nome" => "Imagem",
+			"type" => "image",
+			// "rules" => "",
+			"col" => "col-md-4",
+			"label" => "(1920 x 1080)"
+		],
+
+		"texto" => [
+			"nome" => "Texto",
 			"type" => "textarea",
 			"visivelTabela" => false,
 			"rules" => "trim|required",

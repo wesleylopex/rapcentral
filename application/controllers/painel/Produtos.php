@@ -55,16 +55,6 @@ class Produtos extends GodController
 			"label" => "(1920 x 1080)"
 		],
 
-		"galeria" => [
-			"nome" => "Imagens",
-			"type" => "gallery",
-			"model" => "galeriaProdutosModel",
-			"foreignKey" => "id_produto",
-			// "rules" => "trim|required",
-			"col" => "col-md-12",
-			"label" => "(1920 x 1080)"
-		],
-
 	];
 
 	function __construct()

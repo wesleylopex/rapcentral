@@ -82,7 +82,7 @@
 														<?php foreach ($campos as $key => $campo) : ?>
 															<?php if (isset($campo["visivelTabela"]) && $campo["visivelTabela"]) : ?>
 																<?php if (isset($campo["fromDataBase"]) && $campo["fromDataBase"]) : ?>
-																	<td><?= $registro->option; ?></td>
+																	<td><?= $registro->{$key}; ?></td>
 																<?php elseif ($campo["type"] == "select") : ?>
 																	<td><?= $campo["options"][$registro->{$key}] ?></td>
 																<?php elseif ($campo["type"] == "date") : ?>

@@ -135,7 +135,7 @@ class ImageModel extends CI_Model
       if ($image_name == NULL) {
         $image_name = $app_name . replace("/", "");
       }
-      $config['file_name'] = 'jocc-' . $image_name;
+      $config['file_name'] = 'cr-' . $image_name;
     }
 
     if ($campo == NULL)

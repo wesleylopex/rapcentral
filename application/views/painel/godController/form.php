@@ -99,27 +99,11 @@
                               </div>
                             </div>
                           <?php endif ?>
-
-                          <?php if ($campo["type"] == "gallery") : ?>
-                            <div action="<?= base_url("painel/" . $nomes["link"] . "/uploadDropzoneImage") ?>" class="dropzone">
-                              <div class="dz-message" data-dz-message>
-                                <div class="icon">
-                                  <i class="flaticon-picture"></i>
-                                </div>
-                                <h4 class="message">Arraste e solte imagens</h4>
-                                <div class="note">(Ou clique e selecione)</div>
-                              </div>
-                              <div class="fallback">
-                                <input name="file" type="file" multiple />
-                              </div>
-                            </div>
-                          <?php endif ?>
-
                         </div>
                       <?php endif ?>
                     <?php endforeach ?>
                   </div>
-                  </form>
+                          </form>
                 </div>
                 <div class="card-action">
                   <button type="submit" class="btn btn-black float-right btn-save">Feito!</button>
@@ -160,11 +144,6 @@
       });
     }
 
-    $(".dropzone").dropzone({
-      autoProcessQueue: false,
-      parallelUploads: 10
-    })
-
     $(".btn-save").click(function() {
       saveRegister()
     })
@@ -181,18 +160,12 @@
     });
 
     function saveRegister() {
-      if ($(".dropzone").length > 0) {
-        let dropzone = Dropzone.forElement(".dropzone");
-        dropzone.processQueue();
-      }
-
       let form = document.querySelector("form")
       let formData = new FormData(form);
 
       let nomes = {
         link: "<?= $nomes["link"] ?>"
       }
-
       $.ajax({
         url: "<?= base_url("painel/" . $nomes["link"] . "/salvar") ?>",
         data: formData,
@@ -200,7 +173,7 @@
         processData: false,
         contentType: false,
         type: 'POST',
-        success: function(result) {
+        success (result) {
           response = JSON.parse(result)
           if (response.success) {
             showAlert("primary", response.message, response.icon)
@@ -210,21 +183,12 @@
             }, 1500)
           } else
             showAlert("primary", response.message, response.icon)
+        },
+        error (result) {
+          console.table(result)
         }
       });
     }
-
-    $("form").validate({
-      // errorPlacement: function() {
-      //   return false
-      // },
-      highlight: function(element) {
-        $(element).closest('.form-group').removeClass('has-success').addClass('has-error')
-      },
-      success: function(element) {
-        $(element).closest('.form-group').removeClass('has-error')
-      },
-    });
   </script>
 </body>
 

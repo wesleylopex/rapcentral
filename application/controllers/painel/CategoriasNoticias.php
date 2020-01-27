@@ -29,6 +29,7 @@ class CategoriasNoticias extends GodController
 			"visivelTabela" => true,
 			"rules" => "trim|required",
 			"col" => "col-md-12",
+			"slug" => true
 		],
 	];
 

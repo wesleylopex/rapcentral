@@ -57,36 +57,31 @@ class GodController extends MY_Controller
     }
   }
 
-  public function uploadDropzoneImage()
+  public function slugify($text = null)
   {
-
-    if (!empty($_FILES['file']['name'])) {
-
-      $path = $_FILES['file']['name'];
-      $ext = pathinfo($path, PATHINFO_EXTENSION);
-      $imageName = "jocc-".$this->nomes["link"].date('dmYHis').".$ext";
-
-      session_start();
-      if (!isset($_SESSION["dropzoneImages"]))
-        $_SESSION["dropzoneImages"] = [];
-      else
-        array_push($_SESSION["dropzoneImages"], $imageName);
-
-      // Set preference
-      $config['upload_path'] = 'assets/uploads/';
-      $config['allowed_types'] = 'jpg|jpeg|png';
-      $config['max_size'] = '1024'; // max_size in kb
-      $config['file_name'] = $imageName;
-
-      //Load upload library
-      $this->load->library('upload', $config);
-
-      // File upload
-      if (!file_exists($_FILES["file"]) && $this->upload->do_upload('file')) {
-        // Get data about the file
-        $uploadData = $this->upload->data();
-      }
+    // replace non letter or digits by -
+    $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+  
+    // transliterate
+    $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+  
+    // remove unwanted characters
+    $text = preg_replace('~[^-\w]+~', '', $text);
+  
+    // trim
+    $text = trim($text, '-');
+  
+    // remove duplicate -
+    $text = preg_replace('~-+~', '-', $text);
+  
+    // lowercase
+    $text = strtolower($text);
+  
+    if (empty($text)) {
+      return 'n-a';
     }
+  
+    return $text;
   }
 
   public function salvar()
@@ -110,12 +105,11 @@ class GodController extends MY_Controller
 
         if ($senha)
           $dados[$key] = encode_crip($senha);
-      } else if ($campo["type"] == "gallery") {
-
-        $dropzoneModel = $campo["model"];
-        $dropzoneForeignKey = $campo["foreignKey"];
       } else if (!isset($campo["disabled"]) || (isset($campo["disabled"]) && $campo["disabled"] == false))
         $dados[$key] = $this->input->post($key);
+
+      if(isset($campo["slug"]) && $campo["slug"] == true)
+        $dados["slug"] = $this->slugify($this->input->post($key));
     }
 
     if ($this->form_validation->run() == FALSE) {
@@ -128,22 +122,7 @@ class GodController extends MY_Controller
       if (isset($dados["id"]) && $dados["id"])
         $this->model->update($dados);
       else
-        $id_registro = $this->model->create($dados);
-
-      session_start();
-      $dropzoneImages = $_SESSION["dropzoneImages"];
-
-      if (sizeof($dropzoneImages) > 0) {
-        $this->load->model($dropzoneModel);
-        foreach ($dropzoneImages as $key => $imageName) {
-          $this->{$dropzoneModel}->create([
-            "imagem" => $imageName,
-            $dropzoneForeignKey => $dados["id"] ? $dados["id"] : $id_registro
-          ]);
-        }
-      }
-
-      $_SESSION["dropzoneImages"] = [];
+        $this->model->create($dados);
 
       $result = [
         "success" => true,
@@ -190,16 +169,15 @@ class GodController extends MY_Controller
 
     foreach ($registros as $key => $registro) {
       foreach ($campos as $campoKey => $campo) {
-        if ($campo["type"] == "select" && array_key_exists("fromDataBase", $campo) && $campo["fromDataBase"]) {
+        if ($campo["type"] == "select" && isset($campo["fromDataBase"]) && $campo["fromDataBase"]) {
           $this->load->model($campo["options"]["model"]);
           $model = $this->{$campo["options"]["model"]};
 
           $row = $model->getByPrimary($registro->{$campoKey});
-
           if ($row)
-            $registros[$key]->option = $row->{$campo["options"]["texto"]};
+            $registros[$key]->{$campoKey} = $row->{$campo["options"]["texto"]};
           else
-            $registros[$key]->option = null;
+            $registros[$key]->{$campoKey} = null;
         }
       }
     }
