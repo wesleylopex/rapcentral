@@ -64,7 +64,7 @@ class Noticias extends GodController
 		"data" => [
 			"nome" => "Data",
 			"type" => "date",
-			// "rules" => "",
+			"rules" => "trim|required",
 			"visivelTabela" => true,
 			"col" => "col-md-4",
 		],
@@ -77,6 +77,15 @@ class Noticias extends GodController
 			"label" => "(1920 x 1080)"
 		],
 
+		"apresentacao" => [
+			"nome" => "Apresentação",
+			"type" => "textarea",
+			"visivelTabela" => false,
+			"rules" => "trim",
+			"required" => true,
+			"disabled" => false,
+			"col" => "col-md-12"
+		],
 		"texto" => [
 			"nome" => "Texto",
 			"type" => "textarea",

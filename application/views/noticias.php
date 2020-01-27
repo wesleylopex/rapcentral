@@ -36,26 +36,28 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
+				<?php foreach($noticias as $noticia) : ?>
         		<div class="post">
 	<div class="post-media post-thumb">
 	<div class="post-category">
-                <a href="">Lorem</a>
+                <a href="<?= site_url("noticias/categoria/".$noticia->categoria->slug) ?>"><?= $noticia->categoria->nome ?></a>
               </div>
-		<a href="noticia.php">
-			<img src="<?= base_url() ?>assets/site/images/blog/blog-post-1.jpg" alt="">
+		<a href="<?= site_url("noticias/noticia/$noticia->slug") ?>">
+			<img src="<?= base_url("assets/uploads/images/$noticia->imagem") ?>" alt="">
 		</a>
 	</div>
-	<h2 class="post-title"><a href="noticia.php" class="underline-hover">How To Wear Bright Shoes</a></h2>
+	<h2 class="post-title"><a href="<?= site_url("noticias/noticia/$noticia->slug") ?>" class="underline-hover"><?= $noticia->titulo ?></a></h2>
 	<div class="post-meta">
 		
-	<a href="" class="author underline-hover">por Wesley Lopes</a> /
-              <span class="date">25 Jan 2020</span>
+	<a href="" class="author underline-hover">por <?= $noticia->autor->nome ?></a> /
+              <span class="date"><?= "$noticia->dia $noticia->mes $noticia->ano" ?></span>
 	</div>
 	<div class="post-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, facere. </p>
+		<p><?= $noticia->apresentacao ?></p>
 	</div>
 
 </div>
+<?php endforeach ?>
 <div class="text-center">
 	<ul class="pagination post-pagination">
 		<li><a href="#"><</a>
@@ -78,12 +80,12 @@
       		<div class="col-md-4">
 				<aside class="sidebar">
 	<div class="widget widget-subscription">
-		<form action="">
+		<?= form_open("noticias/pesquisar") ?>
 	<div class="input-group subscription-form">
-              <input type="text" class="form-control" placeholder="Pesquisar notícias">
+              <input type="text" class="form-control" name="pesquisa" placeholder="Pesquisar notícias">
 
               <span class="input-group-btn">
-								<button class="btn btn-main" type="button">Pesquisar!</button>
+								<button type="submit" class="btn btn-main" type="button">Pesquisar!</button>
 							</span>
 						</div>
 						</form>
@@ -93,36 +95,31 @@
 	<div class="widget widget-category">
 		<h4 class="widget-title">Categorias</h4>
 		<ul class="widget-category-list">
-	        <li><a href="#">Animals</a>
-	        </li>
-	        <li><a href="#">Landscape</a>
-	        </li>
-	        <li><a href="#">Portrait</a>
-	        </li>
-	        <li><a href="#">Wild Life</a>
-	        </li>
-	        <li><a href="#">Video</a>
-	        </li>
+		<li><a href="<?= site_url("noticias") ?>">Todas</a>
+					</li>
+			<?php foreach($categorias as $categoria) : ?>
+	        <li><a href="<?= site_url("noticias/categoria/$categoria->slug") ?>"><?= $categoria->nome ?></a>
+					</li>
+					<?php endforeach ?>
 	    </ul>
 	</div> <!-- End category  -->
 
 	<!-- Widget Latest Posts -->
 	<div class="widget widget-latest-post">
 		<h4 class="widget-title">Últimas Notícias</h4>
-		<?php for ($i=0; $i < 4; $i++) : ?>
+		<?php foreach ($ultimasNoticias as $noticia) : ?>
 		<div class="media post-thumb mb-25px">
 			<div class="post-category">
-                <a href="">Lorem</a>
+                <a href="<?= site_url("noticias/categoria/".$noticia->categoria->slug) ?>"><?= $noticia->categoria->nome ?></a>
               </div>
-			<a class="pull-left" href="#">
-				<img class="media-object" src="images/blog/post-thumb.jpg" alt="Image">
+			<a class="pull-left" href="<?= site_url("noticias/noticia/$noticia->slug") ?>">
+				<img class="media-object" src="<?= base_url("assets/uploads/images/$noticia->imagem") ?>" alt="Image">
 			</a>
 			<div class="media-body">
-				<h4 class="media-heading"><a href="">Introducing Swift for Mac</a></h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, officia.</p>
+				<h4 class="media-heading"><a href="<?= site_url("noticias/noticia/$noticia->slug") ?>" class="underline-hover"><?= $noticia->titulo ?></a></h4>
 			</div>
 		</div>
-		<?php endfor ?>
+		<?php endforeach ?>
 	</div>
 	<!-- End Latest Posts -->
 </aside>
