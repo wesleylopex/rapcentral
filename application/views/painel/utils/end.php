@@ -20,8 +20,15 @@
 <script src="<?= base_url() ?>assets/painel/js/plugin/mask/jquery.mask.js"></script>
 <script src="<?= base_url() ?>assets/painel/js/plugin/dropzone/dropzone.min.js"></script>
 <script src="<?= base_url() ?>assets/painel/js/plugin/jquery.validate/jquery.validate.min.js"></script>
+<script src="<?= base_url() ?>assets/painel/plugins/summernote/dist/summernote-bs4.js"></script>
 
 <script>
+
+  $(".phone").mask("(00) 0.0000-0000");
+  $(".summernote").summernote({
+    height: 300,
+  });
+
   // plugin jquery validation
   jQuery.extend(jQuery.validator.messages, {
     required: "Obrigatório.",
@@ -42,6 +49,4 @@
     max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
     min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
   });
-
-  $(".phone").mask("(00) 0.0000-0000");
 </script>

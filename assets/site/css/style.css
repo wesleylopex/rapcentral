@@ -2836,6 +2836,10 @@ h2.post-title {
   margin-bottom: 25px;
 }
 
+.mt-25px {
+  margin-top: 25px;
+}
+
 .pt-0 {
   padding-top: 0!important;
 }

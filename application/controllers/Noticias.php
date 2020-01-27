@@ -8,6 +8,10 @@ class Noticias extends MY_Site_Controller
     parent::__construct();
     $this->data["page"] = "noticias";
     
+
+    $this->load->model("noticiasModel");
+    $this->load->model("categoriasNoticiasModel");
+
     $this->data["ultimasNoticias"] = $this->getConfiguredNoticias(3);
     $this->data["categorias"] = $this->getCategorias();
   }
@@ -20,15 +24,19 @@ class Noticias extends MY_Site_Controller
 
   public function categoria($slug = null) {
 
-    $this->load->model("categoriasNoticiasModel");
     $categoria = $this->categoriasNoticiasModel->getRowWhere(["slug" => $slug]);
 
     if ($categoria) {
-      $this->load->model("noticiasModel");
       $this->data["noticias"] = $this->setNoticias($this->noticiasModel->getAllWhere(["id_categoria"=>$categoria->id]));
       $this->load->view("noticias", $this->data);
     } else
       redirect("noticias");
+  }
+
+  public function noticia($slug) {
+    $noticia = $this->noticiasModel->getRowWhere(["slug"=>$slug]);
+    $this->data["noticia"] = $this->setNoticia($noticia);
+    $this->load->view("noticia", $this->data);
   }
 
   public function pesquisar() {
@@ -53,21 +61,26 @@ class Noticias extends MY_Site_Controller
 
   // HELPING METHODS
   public function getConfiguredNoticias ($limit = null) {
-    $this->load->model("noticiasModel");
     
     return $this->setNoticias($this->noticiasModel->getAll($limit));
   }
 
+  public function setNoticia($noticia) {
+    $noticia->categoria = $this->categoriasNoticiasModel->getByPrimary($noticia->id_categoria);
+    $noticia->autor = $this->usuariosModel->getByPrimary($noticia->id_usuario);
+    $noticia->dia = date("d", strtotime($noticia->data));
+    $noticia->mes = $this->setMes(date("m", strtotime($noticia->data)));
+    $noticia->ano = date("Y", strtotime($noticia->data));
+
+    return $noticia;
+  }
+
   public function setNoticias($noticias = []) {
-    $this->load->model("categoriasNoticiasModel");
+
     $this->load->model("usuariosModel");
 
     foreach ($noticias as $key => $noticia) {
-      $noticia->categoria = $this->categoriasNoticiasModel->getByPrimary($noticia->id_categoria);
-      $noticia->autor = $this->usuariosModel->getByPrimary($noticia->id_usuario);
-      $noticia->dia = date("d", strtotime($noticia->data));
-      $noticia->mes = $this->setMes(date("m", strtotime($noticia->data)));
-      $noticia->ano = date("Y", strtotime($noticia->data));
+      $this->setNoticia($noticia);
     }
 
     return $noticias;
@@ -79,7 +92,6 @@ class Noticias extends MY_Site_Controller
   }
 
   public function getCategorias ($limit = null) {
-    $this->load->model("categoriasNoticiasModel");
     return $this->categoriasNoticiasModel->getAll($limit);
   }
 }

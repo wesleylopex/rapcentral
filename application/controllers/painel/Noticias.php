@@ -28,9 +28,15 @@ class Noticias extends GodController
 			"type" => "text",
 			"visivelTabela" => true,
 			"rules" => "trim|required",
-			"col" => "col-md-12",
+			"col" => "col-md-6",
 			"slug" => true,
-			"required" => "required",
+		],
+		"video" => [
+			"nome" => "video",
+			"type" => "text",
+			"rules" => "trim",
+			"col" => "col-md-6",
+			"label" => "(<a href='https://youtube.com' target='_blank'>Youtube</a>)",
 		],
 
 		"id_categoria" => [
@@ -93,7 +99,8 @@ class Noticias extends GodController
 			"rules" => "trim|required",
 			"required" => true,
 			"disabled" => false,
-			"col" => "col-md-12"
+			"col" => "col-md-12",
+			"class" => "summernote",
 		],
 	];
 
