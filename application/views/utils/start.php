@@ -1,45 +1,44 @@
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-
-  <meta name="description" content="Central Rap"></meta>
-
-  <meta name="author" content="@wesleylopex"></meta>
-
-  <title>Central Rap</title>
-
-  <!-- Mobile Specific Meta -->
-
-  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-
-  <!-- Favicon -->
-
-  <link rel="shortcut icon" type="image/x-icon" href="<?= base_url() ?>assets/site/images/favicon.png"></link>
-
-  <!-- Themefisher Icon font -->
-
-  <link rel="stylesheet" href="<?= base_url() ?>assets/site/plugins/themefisher-font/style.css"></link>
-
-  <!-- bootstrap.min css -->
-
-  <link rel="stylesheet" href="<?= base_url() ?>assets/site/plugins/bootstrap/css/bootstrap.min.css"></link>
-
-  <link rel="stylesheet" href="<?= base_url() ?>assets/site/plugins/animate-css/animate.css"></link>
-
-  <!-- Revolution Slider -->
-
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/site/plugins/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"></link>
-
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/site/plugins/revolution-slider/revolution/fonts/font-awesome/css/font-awesome.css"></link>
-
-  <!-- REVOLUTION STYLE SHEETS -->
-
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/site/plugins/revolution-slider/revolution/css/settings.css"></link>
-
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/site/plugins/revolution-slider/revolution/css/layers.css"></link>
-
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/site/plugins/revolution-slider/revolution/css/navigation.css"></link>
-
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/site/plugins/owl-carousel/dist/assets/owl.carousel.min.css"></link>
-
-  <!-- Main Stylesheet -->
-
-  <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/style.css"></link>
+<!-- title -->
+<title>POFO – Creative Agency, Corporate and Portfolio Multi-purpose Template</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+        <meta name="author" content="ThemeZaa">
+        <!-- description -->
+        <meta name="description" content="POFO is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and portfolio HTML5 template with 25 ready home page demos.">
+        <!-- keywords -->
+        <meta name="keywords" content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, coming soon, faq">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>assets/site/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>assets/site/images/apple-touch-icon-114x114.png">
+        <!-- animation -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/animate.css" />
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/bootstrap.min.css" />
+        <!-- et line icon --> 
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/et-line-icons.css" />
+        <!-- font-awesome icon -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/font-awesome.min.css" />
+        <!-- themify icon -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/themify-icons.css">
+        <!-- swiper carousel -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/swiper.min.css">
+        <!-- justified gallery  -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/justified-gallery.min.css">
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/magnific-popup.css" />
+        <!-- revolution slider -->
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/site/revolution/css/settings.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/site/revolution/css/layers.css">
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/site/revolution/css/navigation.css">
+        <!-- bootsnav -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/bootsnav.css">
+        <!-- style -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/style.css" />
+        <!-- responsive css -->
+        <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/responsive.css" />
+        <!--[if IE]>
+            <script src="js/html5shiv.js"></script>
+        <![endif]-->

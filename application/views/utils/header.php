@@ -1,134 +1,52 @@
-<section class="top-header">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-md-4 col-xs-12 col-sm-4">
-        <div class="social-icon mt-0">
-                            <ul>
-                                <li><a class="fb-icon" href="#"><i class="tf-ion-social-instagram"></i></a></li>
-                                <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="tf-ion-social-googleplus-outline"></i></a></li>
-                            </ul>
+<header>
+            <!-- start navigation -->
+            <nav class="navbar navbar-default bootsnav bg-transparent navbar-scroll-top header-light nav-box-width">
+                <div class="container-fluid nav-header-container">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-5">
+                            <a href="./" title="Central Rap" class="logo"><img src="images/logo.png" data-at2x="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-at2x="images/logo-white@2x.png" alt="Pofo" class="logo-light"></a>
                         </div>
-        </div>
-
-        <div class="col-md-4 col-xs-12 col-sm-4">
-          <!-- Site Logo -->
-
-          <div class="logo text-center">
-            <a href="index.html">
-              <!-- replace logo here -->
-
-              <svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                  font-size="40"
-                  font-family="AustinBold, Austin"
-                  font-weight="bold"
-                >
-                  <g
-                    id="Group"
-                    transform="translate(-108.000000, -297.000000)"
-                    fill="#000000"
-                  >
-                    <text id="AVIATO">
-                      <tspan
-                        x="108.94"
-                        y="325"
-                      >CR</tspan>
-                    </text>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-xs-12 col-sm-4">
-          <!-- Cart -->
-
-          <ul class="top-menu text-right list-inline">
-            <!-- Search -->
-
-            <li class="dropdown search dropdown-slide">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-                <i class="tf-ion-ios-search-strong"></i> Pesquisar
-              </a>
-
-              <ul class="dropdown-menu search-dropdown">
-                <li>
-                  <form action="post">
-                    <input type="search" class="form-control" placeholder="Pesquisar notícias"></input>
-                  </form>
-                </li>
-              </ul>
-            </li>
-
-            <!-- / Search -->
-          </ul>
-
-          <!-- / .nav .navbar-nav .navbar-right -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- End Top Header Bar -->
-  <!-- Main Menu Section -->
-
-  <section class="menu">
-    <nav class="navbar navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <h2 class="menu-title">Main Menu</h2>
-
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-
-        <!-- / .navbar-header -->
-        <!-- Navbar Links -->
-
-        <div id="navbar" class="navbar-collapse collapse text-center">
-          <ul class="nav navbar-nav">
-            <!-- Home -->
-
-            <li class="<?= $page == "home" ? "active" : "" ?>">
-              <a href="<?= base_url() ?>">Home</a>
-            </li>
-            <li class="<?= $page == "noticias" ? "active" : "" ?>">
-              <a href="<?= site_url("noticias") ?>">Notícias</a>
-            </li>
-            <li>
-              <a href="<?= site_url("noticias/categoria/internacional") ?>">Internacional</a>
-            </li>
-            <li>
-              <a href="<?= site_url("noticias/categoria/nacional") ?>">Nacional</a>
-            </li>
-            <li>
-              <a href="<?= site_url("noticias/categoria/lancamentos") ?>">Lançamentos</a>
-            </li>
-            <li>
-              <a href="<?= site_url("contato") ?>">Contato</a>
-            </li>
-
-            <!-- / Blog -->
-          </ul>
-
-          <!-- / .nav .navbar-nav -->
-        </div>
-
-        <!-- /.navbar-collapse -->
-      </div>
-
-      <!-- / .container -->
-    </nav>
-  </section>
+                        <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
+                            <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-toggle-1">
+                                <span class="sr-only">toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="navbar-collapse collapse pull-right" id="navbar-collapse-toggle-1">
+                                <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
+                                    <!-- start menu item -->
+                                    <li>
+                                        <a href="./">Home</a>
+                                    </li>
+                                    <!-- end menu item -->
+                                    <li>
+                                        <a href="noticias.php">Notícias</a>
+                                    </li>
+                                    <li>
+                                        <a href="noticias.php">Internacional</a>
+                                    </li>
+                                    <li>
+                                        <a href="noticias.php">Nacional</a>
+                                    </li>
+                                    <li>
+                                        <a href="lancamentos.php">Lançamentos</a>
+                                    </li>
+                                    <li>
+                                        <a href="contato.php">Contato</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-5 width-auto">
+                            <div class="header-social-icon xs-display-none">
+                                <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="https://instagram.com/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- end navigation -->  
+        </header>
