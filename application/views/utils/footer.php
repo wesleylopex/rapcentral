@@ -10,26 +10,27 @@
                         <!-- end about -->
                         <!-- start blog post -->
                         <div class="col-md-3 col-sm-6 col-xs-12 widget sm-margin-30px-bottom">
-                            <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-15px-bottom font-weight-600 xs-text-center">Latest Blog Post</div>
+                            <div class="widget-title alt-font text-small text-medium-gray text-uppercase margin-15px-bottom font-weight-600 xs-text-center">Últimas notícias</div>
                             <ul class="latest-post position-relative top-3">
+                                <?php foreach($ultimasNoticias as $noticia) : ?>
                                 <li class="border-bottom border-color-medium-dark-gray">
                                     <figure>
-                                        <a href="blog-post-layout-01.html"><img src="http://placehold.it/700x403" alt=""></a>
+                                        <a href="<?= site_url("noticias/noticia/$noticia->slug") ?>">
+                                            <img src="<?= base_url("assets/uploads/images/$noticia->thumbnail") ?>" alt="">
+                                        </a>
                                     </figure>
-                                    <div class="text-small"><a href="blog-post-layout-01.html">Design is not just what looks...</a> <span class="clearfix"></span>20 April 2017 | by <a href="blog-grid.html">Herman Miller</a></div>
+                                    <div class="text-small">
+                                        <a href="<?= site_url("noticias/noticia/$noticia->slug") ?>">
+                                            <?= $noticia->titulo ?>
+                                        </a>
+                                        <span class="clearfix"></span>
+                                        <?= "$noticia->dia $noticia->mes $noticia->ano" ?> | by 
+                                        <a href="<?= site_url("autores/").$noticia->autor->slug ?>">
+                                            <?= $noticia->autor->nome ?>
+                                        </a>
+                                    </div>
                                 </li>
-                                <li class="border-bottom border-color-medium-dark-gray">
-                                    <figure>
-                                        <a href="blog-post-layout-02.html"><img src="http://placehold.it/700x403" alt=""></a>
-                                    </figure>
-                                    <div class="text-small"><a href="blog-post-layout-02.html">A lot of care, effort & passion...</a> <span class="clearfix"></span>20 April 2017 | by <a href="blog-grid.html">Herman Miller</a></div>
-                                </li>
-                                <li>
-                                    <figure>
-                                        <a href="blog-post-layout-03.html"><img src="http://placehold.it/700x403" alt=""></a>
-                                    </figure>
-                                    <div class="text-small"><a href="blog-post-layout-03.html">I love making the stuff, that's...</a> <span class="clearfix"></span>20 April 2017 | by <a href="blog-grid.html">Herman Miller</a></div>
-                                </li>
+                                <?php endforeach ?>
                             </ul>
                         </div>
                         <!-- end blog post -->
@@ -40,7 +41,7 @@
                             <form id="subscribenewsletterform" action="javascript:void(0)" method="post">
                                 <div class="position-relative newsletter width-95">
                                     <div id="success-subscribe-newsletter" class="no-margin-lr"></div>
-                                    <input type="text" id="email" name="email" class="bg-transparent text-small no-margin border-color-medium-dark-gray" placeholder="Enter your email...">
+                                    <input type="text" id="email" name="email" class="bg-transparent text-small no-margin border-color-medium-dark-gray" placeholder="Escreva seu e-mail...">
                                     <button id="button-subscribe-newsletter" type="submit" class="btn btn-arrow-small position-absolute border-color-medium-dark-gray"><i class="fa fa-caret-right no-margin-left"></i></button>
                                 </div>   
                             </form>

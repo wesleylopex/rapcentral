@@ -7,71 +7,20 @@
 
 <body>
   <!-- start header -->
-  <header>
-    <!-- start navigation -->
-    <nav class="navbar navbar-default bootsnav bg-transparent navbar-scroll-top header-light nav-box-width">
-      <div class="container-fluid nav-header-container">
-        <div class="row">
-          <div class="col-md-2 col-xs-5">
-            <a href="./" title="Central Rap" class="logo"><img src="images/logo.png" data-at2x="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-at2x="images/logo-white@2x.png" alt="Pofo" class="logo-light"></a>
-          </div>
-          <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
-            <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-toggle-1">
-                                <span class="sr-only">toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-            <div class="navbar-collapse collapse pull-right" id="navbar-collapse-toggle-1">
-              <ul id="accordion" class="nav navbar-nav navbar-left no-margin alt-font text-normal" data-in="fadeIn" data-out="fadeOut">
-                <!-- start menu item -->
-                <li>
-                  <a href="./">Home</a>
-                </li>
-                <!-- end menu item -->
-                <li>
-                  <a href="noticias.php">Notícias</a>
-                </li>
-                <li>
-                  <a href="noticias.php">Internacional</a>
-                </li>
-                <li>
-                  <a href="noticias.php">Nacional</a>
-                </li>
-                <li>
-                  <a href="noticias.php">Lançamentos</a>
-                </li>
-                <li>
-                  <a href="noticias.php">Contato</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2 col-xs-5 width-auto">
-            <div class="header-social-icon xs-display-none">
-              <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-              <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a href="https://instagram.com/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- end navigation -->
-  </header>
+  <?php include_once("utils/header.php") ?>
   <!-- end header -->
   <!-- start page title section -->
-  <section class="wow fadeIn cover-background background-position-top top-space" style="background-image:url('http://placehold.it/1920x450');">
+  <section class="wow fadeIn cover-background background-position-top top-space" style="background-image:url('<?= base_url("assets/uploads/images/".$banner->imagem) ?>');">
     <div class="opacity-medium bg-extra-dark-gray"></div>
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 display-table page-title-large">
           <div class="display-table-cell vertical-align-middle text-center padding-30px-tb">
             <!-- start sub title -->
-            <span class="display-block text-white opacity6 width-45 sm-width-100 center-col alt-font margin-5px-bottom">We are located in downtown New York</span>
+            <span class="display-block text-white opacity6 width-45 sm-width-100 center-col alt-font margin-5px-bottom"><?= $banner->subtitulo ?></span>
             <!-- end sub title -->
             <!-- start page title -->
-            <h1 class="alt-font text-white font-weight-600 no-margin-bottom">Contact simple</h1>
+            <h1 class="alt-font text-white font-weight-600 no-margin-bottom"><?= $banner->titulo ?></h1>
             <!-- end page title -->
           </div>
         </div>
@@ -160,11 +109,11 @@
                 <div class="col-md-6">
                   <div class="select-style bg-transparent border-color-medium-dark-gray medium-select">
                     <select name="budget" id="budget" class="bg-transparent no-margin-bottom">
-                                                <option value="">Select your budget</option>
-                                                <option value="$500 - $1000">$500 - $1000</option>
-                                                <option value="$1000 - $2000">$1000 - $2000</option>
-                                                <option value="$2000 - $5000">$2000 - $5000</option>
-                                            </select>
+                      <option value="">Select your budget</option>
+                      <option value="$500 - $1000">$500 - $1000</option>
+                      <option value="$1000 - $2000">$1000 - $2000</option>
+                      <option value="$2000 - $5000">$2000 - $5000</option>
+                    </select>
                   </div>
                 </div>
                 <div class="col-md-12">

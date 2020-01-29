@@ -8,15 +8,15 @@
         <?php include_once("utils/header.php") ?>
         <!-- end header -->
         <!-- start page title section -->
-        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('http://placehold.it/1920x1100');">
+        <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url('<?= base_url("assets/uploads/images/".$banner->imagem) ?>');">
             <div class="opacity-medium bg-extra-dark-gray"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12 extra-small-screen display-table page-title-large">
                         <div class="display-table-cell vertical-align-middle text-center">
                             <!-- start page title -->
-                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">Blog images</h1>
-                            <span class="text-white opacity6 alt-font">Lorem Ipsum is simply dummy text printing</span>
+                            <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom"><?= $banner->titulo ?></h1>
+                            <span class="text-white opacity6 alt-font"><?= $banner->subtitulo ?></span>
                             <!-- end page title --> 
                         </div>
                     </div>

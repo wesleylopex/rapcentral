@@ -98,6 +98,12 @@
             <p>Usuários</p>
           </a>
         </li>
+        <li class="nav-item <?= isset($nomes) && $nomes["link"] == "banners" ? "active" : "" ?>">
+          <a href="<?= site_url("painel/banners") ?>">
+            <i class="flaticon-picture"></i>
+            <p>Banners</p>
+          </a>
+        </li>
 
         <!-- NOTICIAS -->
         <li class="nav-section">

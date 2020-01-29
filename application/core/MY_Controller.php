@@ -222,56 +222,60 @@ class MY_Site_Controller extends CI_Controller
   {
     parent::__construct();
 
-    // $this->load->model('metatags_model');
-    $this->load->model('configuracaoModel');
-    // $this->load->model('banner_pagina_model');
-    // $this->load->model('textos_model');
-    // $this->load->model("info_contato_model");
-    // $this->load->model("call_to_action_model");
-    // $this->load->model("servico_model");
-    // $this->load->model("instagram_model");
-    // $this->load->model("anuncios_model");
-    // $this->load->model("banners_anuncios_model");
 
-    $this->is_publicado();
-    $this->data['configuracao'] = $this->configuracaoModel->get_by_primary(1);
-    // $this->data['banners_paginas'] = $this->banner_pagina_model->get_all();
+    $this->load->model('configuracoesModel');
+    $this->load->model('bannersModel');
+    $this->load->model('categoriasNoticiasModel');
+    $this->load->model('noticiasModel');
 
-    // $this->data['info_contato'] = $this->info_contato_model->get_all()[0];
-    // $this->data['call_to_action'] = $this->call_to_action_model->get_all()[0];
-    // // $this->data['servicos'] = $this->servico_model->get_all(6);
-    // $this->data['informacoes'] = $this->info_contato_model->get_by_primary(1);
-    // $this->data['instagram'] = $this->instagram_model->get_by_primary(1);
-    // $this->data['numero_nascimentos'] = $this->contador_model->get_all()[0]->nascimentos;
+    $this->data['configuracoes'] = $this->configuracoesModel->getByPrimary(1);
+    $this->data['categorias'] = $this->categoriasNoticiasModel->getAll();
+    $this->data["ultimasNoticias"] = $this->getConfiguredNoticias(3);
 
     $this->load->vars($this->data);
   }
 
-  public function getAnunciosWithBanners($anuncios = null, $pagina = null)
-  {
-    if ($anuncios == null)
-      $anuncios = $this->anuncios_model->get_all_where(null, null, ["pagina" => $pagina]);
 
-    foreach ($anuncios as $anuncio) {
-      $anuncio->banners = $this->banners_anuncios_model->get_all_where(null, null, ["id_anuncio" => $anuncio->id]);
-    }
-
-    return $anuncios;
+  // HELPING METHODS
+  public function getConfiguredNoticias ($limit = null) {
+    
+    return $this->setNoticias($this->noticiasModel->getAll($limit));
   }
 
-  function is_publicado()
-  {
-    if ($this->configuracaoModel->site_publicado() == 0) {
-      redirect('espera', 'refresh');
-    }
+  public function setNoticia($noticia) {
+    $noticia->categoria = $this->categoriasNoticiasModel->getByPrimary($noticia->id_categoria);
+    $noticia->autor = $this->usuariosModel->getByPrimary($noticia->id_usuario);
+    $noticia->dia = date("d", strtotime($noticia->data));
+    $noticia->mes = $this->setMes(date("m", strtotime($noticia->data)));
+    $noticia->ano = date("Y", strtotime($noticia->data));
+
+    return $noticia;
   }
 
-  public function loadBanner()
-  {
-    foreach ($this->data['banners_paginas'] as $key => $value) {
-      if ($value->pagina == $this->data['page']) {
-        $this->data['banner_page'] = $value;
-      }
+  public function setNoticias($noticias = []) {
+
+    $this->load->model("usuariosModel");
+
+    foreach ($noticias as $key => $noticia) {
+      $this->setNoticia($noticia);
     }
+
+    return $noticias;
+  }
+
+  public function setMes($mes) {
+    $meses = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+    return $meses[intval($mes - 1)];
+  }
+
+  function loadBanner() {
+    $banners = $this->bannersModel->getAll();
+
+    foreach($banners as $banner) {
+      if($banner->pagina == $this->data["page"])
+        return $banner;
+    }
+
+    return null;
   }
 }

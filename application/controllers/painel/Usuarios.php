@@ -29,6 +29,7 @@ class Usuarios extends GodController
 			"visivelTabela" => true,
 			"rules" => "trim|required",
 			"col" => "col-md-6",
+			"slug" => true,
 			"label" => "(<a href='https://google.com' target='_blank'>Google</a>)"
 		],
 

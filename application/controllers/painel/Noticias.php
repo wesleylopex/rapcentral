@@ -75,10 +75,9 @@ class Noticias extends GodController
 			"col" => "col-md-4",
 		],
 
-		"imagem" => [
-			"nome" => "Imagem",
+		"thumbnail" => [
+			"nome" => "Thumbnail",
 			"type" => "image",
-			// "rules" => "",
 			"col" => "col-md-4",
 			"label" => "(1920 x 1080)"
 		],
