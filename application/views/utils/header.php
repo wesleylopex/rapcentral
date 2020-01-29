@@ -4,7 +4,7 @@
                 <div class="container-fluid nav-header-container">
                     <div class="row">
                         <div class="col-md-2 col-xs-5">
-                            <a href="./" title="Central Rap" class="logo"><img src="<?= base_url() ?>assets/site/images/logo.png" data-at2x="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-at2x="images/logo-white@2x.png" alt="Pofo" class="logo-light"></a>
+                            <a href="./" title="Central Rap" class="logo"><img src="<?= base_url("assets/uploads/images/$configuracoes->logo") ?>" data-at2x="images/logo@2x.png" class="logo-dark default" alt="Pofo"><img src="images/logo-white.png" data-at2x="images/logo-white@2x.png" alt="Pofo" class="logo-light"></a>
                         </div>
                         <div class="col-md-7 col-xs-2 width-auto pull-right accordion-menu xs-no-padding-right">
                             <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar-collapse-toggle-1">

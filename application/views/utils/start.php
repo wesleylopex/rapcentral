@@ -1,5 +1,5 @@
 <!-- title -->
-<title>POFO – Creative Agency, Corporate and Portfolio Multi-purpose Template</title>
+<title><?= $configuracoes->nome ?></title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
@@ -9,10 +9,10 @@
         <!-- keywords -->
         <meta name="keywords" content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, coming soon, faq">
         <!-- favicon -->
-        <link rel="shortcut icon" href="images/favicon.png">
-        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url() ?>assets/site/images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url() ?>assets/site/images/apple-touch-icon-114x114.png">
+        <link rel="shortcut icon" href="<?= base_url("assets/uploads/images/$configuracoes->favicon") ?>">
+        <link rel="apple-touch-icon" href="<?= base_url("assets/uploads/images/$configuracoes->favicon") ?>">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?= base_url("assets/uploads/images/$configuracoes->favicon") ?>">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?= base_url("assets/uploads/images/$configuracoes->favicon") ?>">
         <!-- animation -->
         <link rel="stylesheet" href="<?= base_url() ?>assets/site/css/animate.css" />
         <!-- bootstrap -->

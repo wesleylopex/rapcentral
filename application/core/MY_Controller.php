@@ -9,9 +9,11 @@ class GodController extends MY_Controller
     $this->load->model($this->model);
 
     $this->model = $this->{$this->model};
+    $this->load->model("configuracoesModel");
 
     $this->data["permissoes"] = $this->permissoes;
     $this->data["nomes"] = $this->nomes;
+    $this->data["configuracoes"] = $this->configuracoesModel->getByPrimary(1);
 
     $this->camposNaoModificados = $this->campos;
     $this->configuraCampos();

@@ -62,8 +62,7 @@
                 <div class="footer-bottom border-top border-color-medium-dark-gray padding-30px-top">
                     <div class="row">
                         <!-- start copyright -->
-                        <div class="col-md-6 col-sm-6 col-xs-12 text-left text-small xs-text-center">POFO - Portfolio Concept Theme</div>
-                        <div class="col-md-6 col-sm-6 col-xs-12 text-right text-small xs-text-center">&COPY; 2017 POFO is Proudly Powered by <a href="http://www.themezaa.com" target="_blank" title="ThemeZaa">ThemeZaa</a></div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center text-small xs-text-center">&COPY; 2017 Rap Central - Desenvolvido por <a href="https://www.instagram.com/wesleylopex/" target="_blank" title="Wesley Lopes">@wesleylopex</a></div>
                         <!-- end copyright -->
                     </div>
                 </div>

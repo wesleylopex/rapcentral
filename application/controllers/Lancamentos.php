@@ -13,4 +13,8 @@ class Lancamentos extends MY_Site_Controller
   public function index() {
     $this->load->view("lancamentos", $this->data);
   }
+
+  public function lancamento() {
+    $this->load->view("lancamento");
+  }
 }

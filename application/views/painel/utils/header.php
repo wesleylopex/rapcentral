@@ -36,11 +36,6 @@
           </a>
         </li>
         <li class="nav-item dropdown hidden-caret">
-          <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="la la-cog"></i>
-          </a>
-        </li>
-        <li class="nav-item dropdown hidden-caret">
           <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
             <img src="<?= base_url("assets/uploads/images/".$this->session->userdata("imagem")) ?>" alt="image profile" width="36" height="36" class="img-circle">
           </a>
@@ -96,6 +91,12 @@
           <a href="<?= site_url("painel/usuarios") ?>">
             <i class="flaticon-user"></i>
             <p>Usuários</p>
+          </a>
+        </li>
+        <li class="nav-item <?= isset($nomes) && $nomes["link"] == "configuracoes" ? "active" : "" ?>">
+          <a href="<?= site_url("painel/configuracoes") ?>">
+            <i class="flaticon-settings"></i>
+            <p>Configurações</p>
           </a>
         </li>
         <li class="nav-item <?= isset($nomes) && $nomes["link"] == "banners" ? "active" : "" ?>">
